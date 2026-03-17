@@ -145,6 +145,7 @@
         .header-title { font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
         .model-badge { font-size: 11px; padding: 3px 8px; background: var(--bg-tertiary); color: var(--accent-blue); border: 1px solid var(--border-color); border-radius: 20px; }
         .header-actions { display: flex; gap: 6px; }
+        .mobile-only { display: none; }
         .icon-btn {
             width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
             background: transparent; color: var(--text-secondary);
@@ -262,6 +263,7 @@
             .messages-container { padding: 0 12px; }
             .input-wrapper { padding: 10px 12px 14px; }
             .welcome-suggestions { grid-template-columns: 1fr; }
+            .mobile-only { display: inline-flex; }
         }
     </style>
 </head>
@@ -317,6 +319,9 @@
                 <span class="model-badge" id="modelBadge">qwen-plus</span>
             </div>
             <div class="header-actions">
+                <button class="icon-btn mobile-only" title="新建对话" onclick="newChat()">
+                    <i class="fas fa-plus"></i>
+                </button>
                 <button class="icon-btn" title="导出当前对话" onclick="exportChat()">
                     <i class="fas fa-download"></i>
                 </button>
